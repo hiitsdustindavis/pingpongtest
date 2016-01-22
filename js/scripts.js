@@ -14,20 +14,30 @@ if (number <= 0) {
 // USER INTERFACE LOGIC
 $(function() {
   var counter = function(loopEnd) {
-    var output = [];
-    for(var i = 1; i <= loopEnd; i ++) {
-        output.push(i);
+  var output = [];
+    debugger;
+    for (var i = 0; i <= loopEnd; i += loopEnd) {
+    } if (i % 3 === 0) {
+      output.push("ping")
+    } else if (i % 5 === 0) {
+      output.push("pong")
+    } else if (i % 3 !==0 || i % 5 !== 0){
+      output.push(i)
+    } else {
+      return false;
     }
-
-    return output;
   };
 
+
+
+
+
   $("form#counter").submit(function(event) {
+    // var numbers = [];
+    var loopEnd = $("input#count-to").val();
+    var numbers = $(counter([loopEnd]));
 
-    var loopEnd = parseInt($("input#count-to").val());
-    var numbers = counter(loopEnd);
-
-    $(".output").text(numbers);
+    $("#output").text(numbers);
 
     $("#result").show();
     event.preventDefault();
@@ -35,6 +45,18 @@ $(function() {
   });
 });
 
+
+// document.getElementById("output").innerHTML = "Good day";
+
+// PRE CONDITIONAL STATEMENT WORK
+// $(function() {
+//   var counter = function(loopEnd) {
+//     var output = [];
+//     for(var i = 1; i <= loopEnd; i ++) {
+//         output.push(i);
+//     }
+//     return output;
+//   };
 
 // $(function() {
 //   var pingPong = function(number) {
