@@ -16,7 +16,7 @@ $(function() {
   var counter = function(loopEnd) {
   var output = [];
     debugger;
-    for (var i = 0; i <= loopEnd; i += loopEnd) {
+    for (var i = 0; i <= loopEnd; i ++) {
     } if (i % 3 === 0) {
       output.push("ping")
     } else if (i % 5 === 0) {
