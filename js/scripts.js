@@ -13,25 +13,47 @@ if (number <= 0) {
 
 // USER INTERFACE LOGIC
 $(function() {
-  var number = function(loopEnd) {
-    alert("hey");
-  var output = [];
-  for(var i = 0; i <= loopEnd; i ++) {
-      output.push(i);
-}
-  return output;
-};
-});
+  var counter = function(loopEnd) {
+    var output = [];
+    for(var i = 1; i <= loopEnd; i ++) {
+        output.push(i);
+    }
+
+    return output;
+  };
+
   $("form#counter").submit(function(event) {
 
-      var loopEnd =
-      parseInt($("input#count-to").val());
-      debugger;
-      var numbers = counter(loopEnd, multiple);
+    var loopEnd = parseInt($("input#count-to").val());
+    var numbers = counter(loopEnd);
 
-      $(".output").text(numbers);
+    $(".output").text(numbers);
 
-      $("#result").show();
-      event.preventDefault();
+    $("#result").show();
+    event.preventDefault();
 
-    });
+  });
+});
+
+
+// $(function() {
+//   var pingPong = function(number) {
+//   var output = [];
+//   for(var i = 1; i <= number; i ++) {
+//       output.push(i);
+// }
+//   return output;
+// };
+// });
+//   $("form#counter").submit(function(event) {
+//
+//       var numberEnd =
+//       parseInt($("input#user-number").val());
+//       var result = pinPong(numberEnd);
+//
+//       $(".output").text(result);
+//
+//       $("#result").show();
+//       event.preventDefault();
+//
+//     });
