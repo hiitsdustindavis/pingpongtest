@@ -1,6 +1,6 @@
-var pingPong = function(input) {
-for(i = 0; i = 3; 1++)
-  if (input <= 0)
-
-  return false;
+var pingPong = function(number) {
+  if (number <= 0);
+  if (number = "3");
+  return "1, 2, ping";
 }
+// for(i = 0; i = 3; 1++)
