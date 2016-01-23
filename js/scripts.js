@@ -26,21 +26,14 @@ $(function() {
     } else {
       return false;
     }
+    return output;
   };
 
   $("form#counter").submit(function(event) {
-    var numbers = [counter(loopEnd)];
     var loopEnd = $("input#count-to").val();
-
-
-
-      // for (var i = 0; i < number.length; i ++) {
-      //   listItem += "<li>" + result[i] + "</li>";
-      // }
-
+    var numbers = [counter(loopEnd)];
 
     $("#output").text(numbers);
-
     $("#result").show();
     event.preventDefault();
 
