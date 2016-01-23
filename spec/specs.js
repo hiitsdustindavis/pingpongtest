@@ -3,7 +3,7 @@ describe('number', function() {
     expect(number(0)).to.equal(false);
   });
   it("is false if user enters a non number", function() {
-    expect(number("brad")).to.equal("NaN");
+    expect(number("brad")).to.equal(false);
   });
   it("returns 'ping' if number is divisible by 3", function() {
     expect(number(3)).to.equal("ping");
