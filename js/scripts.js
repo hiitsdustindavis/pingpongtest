@@ -16,7 +16,7 @@ $(function() {
   var counter = function(loopEnd) {
   var output = [];
     debugger;
-    for (var i = 0; i <= loopEnd; i ++) {
+    for (i = 0; i <= loopEnd; i ++) {
     } if (i % 3 === 0) {
       output.push("ping")
     } else if (i % 5 === 0) {
@@ -28,14 +28,16 @@ $(function() {
     }
   };
 
-
-
-
-
   $("form#counter").submit(function(event) {
-    // var numbers = [];
+    var numbers = [counter(loopEnd)];
     var loopEnd = $("input#count-to").val();
-    var numbers = $(counter([loopEnd]));
+
+
+
+      // for (var i = 0; i < number.length; i ++) {
+      //   listItem += "<li>" + result[i] + "</li>";
+      // }
+
 
     $("#output").text(numbers);
 
