@@ -1,3 +1,10 @@
 #result {
   display: none;
 }
+
+ul
+{
+  font-size: 6em;
+  text-align: center;
+  list-style-type: none;
+}

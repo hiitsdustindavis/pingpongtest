@@ -24,11 +24,13 @@ var output = [];
 $(function() {
 
   $("form#counter").submit(function(event) {
-    debugger;
+    // debugger;
     var gnome = $("input#count-to").val();
     var result = number(gnome);
-      // for (i = 0; i < result.length; i ++) {
-        document.getElementById("output").innerHTML = result + "</br>";
+    var list = "";
+      for ( i = 0; i < result.length; i ++) {
+        list += "<li>" + result[i] + "</li>";
+      } document.getElementById("output").innerHTML = list;
         // document.write(result[i]);
       // }
     // result.toString("#output");
