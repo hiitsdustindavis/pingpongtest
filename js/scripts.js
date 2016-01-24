@@ -7,13 +7,13 @@ var output = [];
     // debugger;
     for (i = 1; i <= input; i ++) {
       if (i % 15 === 0) {
-        output.push("ping pong");
+        output.push(" ping pong");
       } else if (i % 3 === 0) {
-        output.push("ping");
+        output.push(" ping");
       } else if (i % 5 === 0) {
-        output.push("pong");
+        output.push(" pong");
       } else {
-        output.push(i);
+        output.push(" " + i);
       }
     }
   }
@@ -27,9 +27,10 @@ $(function() {
     debugger;
     var gnome = $("input#count-to").val();
     var result = number(gnome);
-      for (i = 0; i < result.length; i ++) {
-        document.write(result[i]);
-      }
+      // for (i = 0; i < result.length; i ++) {
+        document.getElementById("output").innerHTML = result + "</br>";
+        // document.write(result[i]);
+      // }
     // result.toString("#output");
     event.preventDefault();
   });
