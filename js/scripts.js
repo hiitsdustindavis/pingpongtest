@@ -15,7 +15,6 @@ if (number <= 0) {
 $(function() {
   var counter = function(loopEnd) {
   var output = [];
-    debugger;
     for (i = 0; i <= loopEnd; i ++) {
     } if (i % 3 === 0) {
       output.push("ping")
@@ -39,38 +38,3 @@ $(function() {
 
   });
 });
-
-
-// document.getElementById("output").innerHTML = "Good day";
-
-// PRE CONDITIONAL STATEMENT WORK
-// $(function() {
-//   var counter = function(loopEnd) {
-//     var output = [];
-//     for(var i = 1; i <= loopEnd; i ++) {
-//         output.push(i);
-//     }
-//     return output;
-//   };
-
-// $(function() {
-//   var pingPong = function(number) {
-//   var output = [];
-//   for(var i = 1; i <= number; i ++) {
-//       output.push(i);
-// }
-//   return output;
-// };
-// });
-//   $("form#counter").submit(function(event) {
-//
-//       var numberEnd =
-//       parseInt($("input#user-number").val());
-//       var result = pinPong(numberEnd);
-//
-//       $(".output").text(result);
-//
-//       $("#result").show();
-//       event.preventDefault();
-//
-//     });
